@@ -1,1 +1,11 @@
-console.log('Welcome to this template this index js file is you front js file that you load the other js files into.');
+// Imports
+import render from './render/render.js';
+import openForm from './formhandling/openForm.js';
+
+// Variables
+const projAdd = document.getElementById('projectAdd');
+
+// Event Listeners
+projAdd.addEventListener('click',render(openForm('projectAdd')));
+
+// Functions
