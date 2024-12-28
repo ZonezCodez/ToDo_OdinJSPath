@@ -1,4 +1,4 @@
-export default function handleProjForm(e){
-    e.preventDefault();
-    
+export default function handleProjForm(form){
+    let formData = new FormData(form);
+    console.log(formData.get('Project'));
 }

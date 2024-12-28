@@ -1,4 +1,4 @@
-import handleProjForm from "../formhandling/handleProjForm"; // Import this function to pass the form data on
+import handleProjForm from "../formhandling/handleProjForm.js"; // Import this function to pass the form data on
 
 export default function createProjForm(){
     // Variables to create all the html for this form
@@ -29,7 +29,9 @@ export default function createProjForm(){
 
     labelProj.setAttribute('id','labelProj');
     labelProj.textContent = 'Project Name: ';
+    labelProj.setAttribute('for','Project');
     inputProj.setAttribute('id','inputProj');
+    inputProj.setAttribute('name','Project');
 
     labelCreator.setAttribute('id','labelCreator');
     labelCreator.textContent = 'Your Name: ';
@@ -53,7 +55,7 @@ export default function createProjForm(){
     submitBtn.type = 'submit';
 
     // Handles adding any event listeners to the form
-    form.addEventListener('submit',handleProjForm(e));
+    form.addEventListener('submit',(e)=>{e.preventDefault(); handleProjForm(form)});
     
     // Appends everything to the form then returns the form variable
     labelProj.appendChild(inputProj);
@@ -66,7 +68,7 @@ export default function createProjForm(){
     form.appendChild(title);
     form.appendChild(labelProj);
     form.appendChild(labelCreator);
-    form,appendChild(labelDue);
+    form.appendChild(labelDue);
     form.appendChild(labelCreated);
     form.appendChild(labelDesc);
     form.appendChild(submitBtn);
