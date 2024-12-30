@@ -1,0 +1,28 @@
+/* Base css for the page */
+body {
+    display: grid;
+    grid-template-rows: 20% 77% 3%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    text-align: center;
+}
+
+#inFoot {
+    height: fit-content;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100%;
+}

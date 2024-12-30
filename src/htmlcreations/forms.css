@@ -1,0 +1,14 @@
+/* This css file handles all the form css */
+form {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+#exitForm {
+    cursor: pointer;
+}
+
+#labelDesc {
+    display: flex;
+    align-items: start;
+}

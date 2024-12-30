@@ -1,4 +1,5 @@
 import handleProjForm from "../formhandling/handleProjForm.js"; // Import this function to pass the form data on
+import returnHome from '../formhandling/returnHome.js'; // Import this function for when you go back to the homepage after deciding not to make a new project
 
 export default function createProjForm(){
     // Variables to create all the html for this form
@@ -55,8 +56,8 @@ export default function createProjForm(){
     labelDesc.textContent = 'Project Description: ';
     labelDesc.setAttribute('for','Desc');
     inputDesc.setAttribute('id','inputDesc');
-    inputDesc.rows = '10';
-    inputDesc.cols = '20';
+    inputDesc.rows = '5';
+    inputDesc.cols = '30';
     inputDesc.setAttribute('name','Desc');
 
     submitBtn.setAttribute('id','submitBtn');
@@ -64,6 +65,7 @@ export default function createProjForm(){
 
     // Handles adding any event listeners to the form
     form.addEventListener('submit',(e)=>{e.preventDefault(); handleProjForm(form)});
+    exitForm.addEventListener('click',returnHome);
     
     // Appends everything to the form then returns the form variable
     labelProj.appendChild(inputProj);
