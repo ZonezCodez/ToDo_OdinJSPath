@@ -35,21 +35,29 @@ export default function createProjForm(){
 
     labelCreator.setAttribute('id','labelCreator');
     labelCreator.textContent = 'Your Name: ';
+    labelCreator.setAttribute('for','Creator');
     inputCreator.setAttribute('id','inputCreator');
+    inputCreator.setAttribute('name','Creator');
 
     labelDue.setAttribute('id','labelDue');
     labelDue.textContent = 'Due On: ';
+    labelDue.setAttribute('for','Due');
     inputDue.setAttribute('id','inputDue');
+    inputDue.setAttribute('name','Due');
 
     labelCreated.setAttribute('id','labelCreated');
     labelCreated.textContent = 'Todays Date: ';
+    labelCreated.setAttribute('for','Created');
     inputCreated.setAttribute('id','inputCreated');
+    inputCreated.setAttribute('name','Created');
 
     labelDesc.setAttribute('id','labelDesc');
     labelDesc.textContent = 'Project Description: ';
+    labelDesc.setAttribute('for','Desc');
     inputDesc.setAttribute('id','inputDesc');
     inputDesc.rows = '10';
     inputDesc.cols = '20';
+    inputDesc.setAttribute('name','Desc');
 
     submitBtn.setAttribute('id','submitBtn');
     submitBtn.type = 'submit';
